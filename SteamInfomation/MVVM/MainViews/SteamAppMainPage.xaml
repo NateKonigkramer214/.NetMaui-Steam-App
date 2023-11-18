@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SteamInfomation.MVVM.MainViews.SteamAppMainPage"
+             Title="SteamAppMainPage">
+    <ScrollView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <!-- Title -->
+            <Label Text="Steam App" HorizontalOptions="Center" Grid.Row="0" FontSize="30"  Padding="20"/>
+
+            <!-- Search -->
+            <SearchBar x:Name="searchBar"
+                       Placeholder="Search owned games"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       Grid.Row="1"
+                       />
+
+            <!-- Frame -->
+            <Frame  Margin="30" x:Name="gameInfoFrame"
+                   BorderColor="{DynamicResource FrameBorderColor}"
+                   CornerRadius="10"
+                   Grid.Row="2"
+                   Padding="20">
+                <StackLayout>
+                    <!-- Game Information -->
+                    <Label x:Name="nameLabel" Text="Game Name" FontAttributes="Bold"/>
+                    <Label x:Name="playtime2WeeksLabel" Text="Playtime (2 weeks)"/>
+                    <Label x:Name="playtimeForeverLabel" Text="Playtime (forever)"/>
+                    <Image x:Name="gameImage" Source="imageofthegame.jpg" Aspect="AspectFill"/>
+                </StackLayout>
+            </Frame>
+        </Grid>
+    </ScrollView>
+</ContentPage>
