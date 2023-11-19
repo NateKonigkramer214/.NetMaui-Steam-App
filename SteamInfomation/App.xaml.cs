@@ -1,4 +1,5 @@
 ﻿using SteamInfomation.MVVM.MainViews;
+using Microsoft.Maui.Controls;
 
 
 namespace SteamInfomation;
@@ -9,6 +10,6 @@ public partial class App : Application
 	{
 		InitializeComponent();
 
-		MainPage = new SteamAppMainPage();
-	}
+        MainPage = new NavigationPage(new LoginPage());
+    }
 }

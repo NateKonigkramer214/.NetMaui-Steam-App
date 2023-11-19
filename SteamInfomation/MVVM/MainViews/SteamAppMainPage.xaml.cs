@@ -6,4 +6,10 @@ public partial class SteamAppMainPage : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    //This was button for linking pages
+    private void BtnLogin_Clicked(object sender, EventArgs e)
+    {
+		//Navigation.PushAsync(new LoginPage());
+    }
 }

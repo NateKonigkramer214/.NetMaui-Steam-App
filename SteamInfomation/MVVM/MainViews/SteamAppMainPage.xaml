@@ -36,6 +36,8 @@
                     <Image x:Name="gameImage" Source="imageofthegame.jpg" Aspect="AspectFill"/>
                 </StackLayout>
             </Frame>
+            <!--This was button for linking pages -->
+            <!--<Button x:Name="BtnLogin" Text="Login?" Margin="20" Clicked="BtnLogin_Clicked" Grid.Row="2"/>-->
         </Grid>
     </ScrollView>
 </ContentPage>
