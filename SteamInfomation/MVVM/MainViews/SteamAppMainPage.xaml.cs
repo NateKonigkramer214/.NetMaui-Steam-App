@@ -12,4 +12,9 @@ public partial class SteamAppMainPage : ContentPage
     {
 		//Navigation.PushAsync(new LoginPage());
     }
+
+    private void searchBar_SearchButtonPressed(object sender, EventArgs e)
+    {
+
+    }
 }

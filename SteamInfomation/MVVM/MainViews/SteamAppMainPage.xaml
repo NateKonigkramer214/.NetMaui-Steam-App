@@ -2,42 +2,53 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SteamInfomation.MVVM.MainViews.SteamAppMainPage"
-             Title="SteamAppMainPage">
+             Title="SteamAppMainPage"
+             BackgroundColor="#171a21">
     <ScrollView>
+        <!--Grid 1-->
         <Grid>
             <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
 
             <!-- Title -->
-            <Label Text="Steam App" HorizontalOptions="Center" Grid.Row="0" FontSize="30"  Padding="20"/>
+            <Label Text="Steam App"
+               HorizontalOptions="Center" 
+               Grid.Row="0"
+               FontSize="30" 
+               Padding="20" 
+               TextColor="#c7d5e0"
+               FontAttributes="Bold,Italic"/>
 
-            <!-- Search -->
-            <SearchBar x:Name="searchBar"
+            <!-- Search 1 -->
+            <StackLayout Grid.Row="1">
+                <SearchBar x:Name="searchBar1"
                        Placeholder="Search owned games"
                        HorizontalOptions="CenterAndExpand"
                        VerticalOptions="CenterAndExpand"
-                       Grid.Row="1"
+                       TextColor="#66c0f4"
                        />
-
-            <!-- Frame -->
-            <Frame  Margin="30" x:Name="gameInfoFrame"
-                   BorderColor="{DynamicResource FrameBorderColor}"
+                <!-- Frame 1 -->
+                <Frame  Margin="30" x:Name="gameInfoFrame1"
+                   BorderColor="#2a475e"
                    CornerRadius="10"
-                   Grid.Row="2"
                    Padding="20">
-                <StackLayout>
-                    <!-- Game Information -->
-                    <Label x:Name="nameLabel" Text="Game Name" FontAttributes="Bold"/>
-                    <Label x:Name="playtime2WeeksLabel" Text="Playtime (2 weeks)"/>
-                    <Label x:Name="playtimeForeverLabel" Text="Playtime (forever)"/>
-                    <Image x:Name="gameImage" Source="imageofthegame.jpg" Aspect="AspectFill"/>
-                </StackLayout>
-            </Frame>
-            <!--This was button for linking pages -->
+                    <StackLayout>
+                        <!-- Game Information -->
+                        <Label x:Name="nameLabel1" Text="Game Name" FontAttributes="Bold"/>
+                        <Label x:Name="playtime2WeeksLabel1" Text="Playtime (2 weeks)"/>
+                        <Label x:Name="playtimeForeverLabel1" Text="Playtime (forever)"/>
+                        <Image x:Name="gameImage1" Source="imageofthegame.jpg" Aspect="AspectFill"/>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+
+            <!--This was a button for linking pages -->
             <!--<Button x:Name="BtnLogin" Text="Login?" Margin="20" Clicked="BtnLogin_Clicked" Grid.Row="2"/>-->
         </Grid>
     </ScrollView>
+
 </ContentPage>
