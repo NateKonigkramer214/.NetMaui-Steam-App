@@ -4,14 +4,24 @@
              x:Class="SteamInfomation.MVVM.MainViews.LoginPage"
              Title="Login">
 
-    
+
     <StackLayout Margin="20">
+        <Image Source="steam2p.png" />
         <!-- Title -->
         <Label Text="Steam App" HorizontalOptions="Center" Grid.Row="0" FontSize="30"  Padding="20"/>
         <!-- Login Entry-->
         <Entry Placeholder="Username" Text="{Binding Username}" />
         <Entry Placeholder="Password" Text="{Binding Password}" IsPassword="True" />
-        <Button Text="Login" Command="{Binding LoginCommand}" />
+        <Button x:Name="LoginBtn" Text="Login" Command="{Binding LoginCommand}" Clicked="LoginBtn_Clicked" />
+
+        <Button x:Name="CreateACBtn"
+                Text="New here? Create an account"
+                BackgroundColor="Transparent"
+                BorderColor="Transparent"
+                TextColor="Black"
+                FontAttributes="Italic"
+                FontSize="14"
+                Clicked="CreateACBtn_Clicked" />
     </StackLayout>
-    
+
 </ContentPage>

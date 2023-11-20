@@ -6,4 +6,14 @@ public partial class LoginPage : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private void LoginBtn_Clicked(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new SteamAppMainPage());
+    }
+
+    private void CreateACBtn_Clicked(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new CreateAccountPage());
+    }
 }
