@@ -15,8 +15,8 @@
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <Button Grid.Column="0" Grid.Row="0" ImageSource="steam2p"  />
-            <Button Grid.Column="1" Grid.Row="0" ImageSource="steam2p" />
+            <Button x:Name="img1" Grid.Column="0" Grid.Row="0" ImageSource="console" Clicked="img1_Clicked" HeightRequest="100" WidthRequest="100" BackgroundColor="White"/>
+            <Button x:Name="img2"  Grid.Column="1" Grid.Row="0" ImageSource="controller" Clicked="img2_Clicked" HeightRequest="100" WidthRequest="100" BackgroundColor="White"/>
         </Grid>
         
 
