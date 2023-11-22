@@ -9,7 +9,7 @@ public partial class LoginPage : ContentPage
 
     private void LoginBtn_Clicked(object sender, EventArgs e)
     {
-        Navigation.PushAsync(new MainSteamPage());
+        Navigation.PushAsync(new SteamAppMainPage());
     }
 
     private void CreateACBtn_Clicked(object sender, EventArgs e)
