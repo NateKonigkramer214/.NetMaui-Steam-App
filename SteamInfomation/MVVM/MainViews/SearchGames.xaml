@@ -3,51 +3,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SteamInfomation.MVVM.MainViews.SearchGames"
              Title="SearchGames">
-    <ScrollView>
-        <!--Grid 1-->
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-            </Grid.RowDefinitions>
+    <StackLayout>
+        <!-- Search Input -->
+        <Entry Placeholder="Enter game name" x:Name="txtGameName" />
+        <Button Text="Search" />
 
-            <!-- Title -->
-            <Label Text="Steam App"
-               HorizontalOptions="Center" 
-               Grid.Row="0"
-               FontSize="30" 
-               Padding="20" 
-               TextColor="#c7d5e0"
-               FontAttributes="Bold,Italic"/>
-
-            <!-- Search 1 -->
-            <StackLayout Grid.Row="1">
-                <SearchBar x:Name="searchBar1"
-                       Placeholder="Search owned games"
-                       HorizontalOptions="CenterAndExpand"
-                       VerticalOptions="CenterAndExpand"
-                       TextColor="#66c0f4"
-                       />
-                <!-- Frame 1 -->
-                <Frame  Margin="30" x:Name="gameInfoFrame1"
-                   BorderColor="#2a475e"
-                   CornerRadius="10"
-                   Padding="20">
-                    <StackLayout>
-                        <!-- Game Information -->
-                        <Label x:Name="nameLabel1" Text="Game Name" FontAttributes="Bold"/>
-                        <Label x:Name="playtime2WeeksLabel1" Text="Playtime (2 weeks)"/>
-                        <Label x:Name="playtimeForeverLabel1" Text="Playtime (forever)"/>
-                        <Image x:Name="gameImage1" Source="imageofthegame.jpg" Aspect="AspectFill"/>
-                    </StackLayout>
-                </Frame>
+        <!-- Display Game Information -->
+        <Frame x:Name="gameInfoFrame" IsVisible="False">
+            <StackLayout>
+                <Label x:Name="lblGameTitle" />
+                <Label x:Name="lblGameDescription" />
+                <!-- Add more labels for additional information -->
             </StackLayout>
-
-            <!--This was a button for linking pages -->
-            <!--<Button x:Name="BtnLogin" Text="Login?" Margin="20" Clicked="BtnLogin_Clicked" Grid.Row="2"/>-->
-        </Grid>
-    </ScrollView>
+        </Frame>
+    </StackLayout>
 
 </ContentPage>
