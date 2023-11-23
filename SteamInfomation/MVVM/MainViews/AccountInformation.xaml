@@ -42,7 +42,7 @@
                 Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" />
 
         <!-- Profile Image -->
-        <Image Source="https://avatars.steamstatic.com/c1735026a0c05d40511904686195eab6ae9ea6a9_full.jpg"
+        <Image Source=""
                Aspect="AspectFill"
                HeightRequest="200"
                WidthRequest="200"
