@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using SteamInfomation.MVVM.Models;
 
 
 namespace SteamInfomation.MVVM.ViewModels
@@ -37,7 +38,7 @@ namespace SteamInfomation.MVVM.ViewModels
             var steamApiResponse = await _teamApiService.GetAccountInformation(Steamid);
             if (steamApiResponse != null)
             {
-                //todo
+                
             }
         }
     }
