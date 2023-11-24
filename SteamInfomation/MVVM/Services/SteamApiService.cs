@@ -12,18 +12,19 @@ namespace SteamInfomation.MVVM.Services
     {
         private readonly HttpClient _httpClient;
 
-        public SteamApiService() 
+        public SteamApiService()
         {
             _httpClient = new HttpClient();
             _httpClient.BaseAddress = new Uri(Constants.Constants.API_BASE_URL);
         }
 
-        public async Task<SteamApiService> GetAccountInformation(string SteamId)
+        public async Task<SteamApiResponse> GetAccountInformation(string steamId)
         {
             if (Connectivity.Current.NetworkAccess != NetworkAccess.Internet)
                 return null;
-            return await _httpClient.GetFromJsonAsync<SteamApiService>($"?key={Constants.Constants.API_KEY}&steamids={SteamId}");
-        }
 
+            var response = await _httpClient.GetFromJsonAsync<SteamApiResponse>($"?key={Constants.Constants.API_KEY}&steamids={steamId}");
+            return response;
+        }
     }
 }

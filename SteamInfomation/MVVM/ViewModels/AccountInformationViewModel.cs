@@ -33,14 +33,19 @@ namespace SteamInfomation.MVVM.ViewModels
 
 
         [RelayCommand]
-        private async Task FetchAccountData()
+        public async Task FetchAccountData()
         {
-            var steamApiResponse = await _teamApiService.GetAccountInformation(Steamid);
-            if (steamApiResponse != null)
+            var steamPlayer = await _teamApiService.GetAccountInformation(Steamid);
+
+            if (steamPlayer != null && steamPlayer.response != null && steamPlayer.response.players.Length > 0)
             {
-                
+                Gamertag = steamPlayer.response.players[0].personaname;
+                Realname = steamPlayer.response.players[0].realname;
+                Avatarfullsize = steamPlayer.response.players[0].avatarfull;
+                Profilelink = steamPlayer.response.players[0].profileurl;
             }
         }
+
     }
 
 }

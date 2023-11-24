@@ -7,14 +7,11 @@ using System.Text.Json.Serialization;
 
 namespace SteamInfomation.MVVM.Models
 {
-    public class AccountInfo
+    public class SteamApiResponse
     {
+        [JsonPropertyName("Response")]
+        public Response response { get; set; }
 
-        public class Rootobject
-        {
-            [JsonPropertyName("Response")]
-            public Response response { get; set; }
-        }
 
         public class Response
         {
