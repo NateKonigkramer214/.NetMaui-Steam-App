@@ -43,7 +43,7 @@
                 BackgroundColor="Red"
                 HorizontalOptions="FillAndExpand"
                 VerticalOptions="Center"
-                Clicked="Button_Clicked"
+                Command="{Binding FetchAccountDataCommand}"
                 Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" />
 
         <!-- Profile Image -->
