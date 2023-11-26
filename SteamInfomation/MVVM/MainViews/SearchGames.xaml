@@ -3,19 +3,26 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SteamInfomation.MVVM.MainViews.SearchGames"
              Title="SearchGames">
-    <StackLayout>
-        <!-- Search Input -->
-        <Entry Placeholder="Enter game name" x:Name="txtGameName" />
-        <Button Text="Search" />
+    <StackLayout Padding="20">
 
-        <!-- Display Game Information -->
-        <Frame x:Name="gameInfoFrame" IsVisible="False">
-            <StackLayout>
-                <Label x:Name="lblGameTitle" />
-                <Label x:Name="lblGameDescription" />
-                <!-- Add more labels for additional information -->
-            </StackLayout>
-        </Frame>
+        <Label Text="Game Information" 
+               FontSize="24"
+               HorizontalOptions="Center" 
+               Margin="0,20,0,20"/>
+
+        <CollectionView ItemsSource="{Binding Games}" SelectionMode="None">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Padding="10">
+                        <Image Source="{Binding ImgIconUrl}" WidthRequest="50" HeightRequest="50" />
+                        <Label Text="{Binding Name}" FontSize="18" />
+                        <Label Text="{Binding Playtime2Weeks, StringFormat='2 Weeks: {0} minutes'}" />
+                        <Label Text="{Binding PlaytimeForever, StringFormat='Forever: {0} minutes'}" />
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
     </StackLayout>
 
 </ContentPage>
