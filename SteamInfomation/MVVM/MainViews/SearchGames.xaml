@@ -2,27 +2,32 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SteamInfomation.MVVM.MainViews.SearchGames"
+             xmlns:vm="clr-namespace:SteamInfomation.MVVM.ViewModels"
+             x:DataType="vm:SearchGamesViewModel"
              Title="SearchGames">
+    
     <StackLayout Padding="20">
+        <Label Text="Enter Steam ID" FontSize="18" />
+        <Entry Placeholder="Steam ID" Text="{Binding Steamid}" />
+
+        <Button Text="Search" Command="{Binding FetchRecentGamesCommand}" />
 
         <Label Text="Game Information" 
                FontSize="24"
                HorizontalOptions="Center" 
                Margin="0,20,0,20"/>
 
-        <CollectionView ItemsSource="{Binding Games}" SelectionMode="None">
+        <CollectionView ItemsSource="{Binding Games}" SelectionMode="Single">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <StackLayout Padding="10">
-                        <Image Source="{Binding ImgIconUrl}" WidthRequest="50" HeightRequest="50" />
+                        <Image Source="{Binding Img_icon_url}" WidthRequest="50" HeightRequest="50" />
                         <Label Text="{Binding Name}" FontSize="18" />
-                        <Label Text="{Binding Playtime2Weeks, StringFormat='2 Weeks: {0} minutes'}" />
-                        <Label Text="{Binding PlaytimeForever, StringFormat='Forever: {0} minutes'}" />
+                        <Label Text="{Binding Playtime_2weeks, StringFormat='2 Weeks: {0} minutes'}" />
+                        <Label Text="{Binding Playtime_forever, StringFormat='Forever: {0} minutes'}" />
                     </StackLayout>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-
     </StackLayout>
-
 </ContentPage>
