@@ -26,5 +26,14 @@ namespace SteamInfomation.MVVM.Services
             var response = await _httpClient.GetFromJsonAsync<SteamApiResponse>($"?key={Constants.Constants.API_KEY}&steamids={steamId}");
             return response;
         }
+
+        public async Task<SteamApiResponse> GetRecentGames(string steamId)
+        {
+            if (Connectivity.Current.NetworkAccess != NetworkAccess.Internet)
+                return null;
+
+            var response = await _httpClient.GetFromJsonAsync<SteamApiResponse>($"?key={Constants.Constants.API_KEY}&steamids={steamId}");
+            return response;
+        }
     }
 }

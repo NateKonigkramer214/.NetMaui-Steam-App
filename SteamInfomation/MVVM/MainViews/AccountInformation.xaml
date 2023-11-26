@@ -5,7 +5,7 @@
              xmlns:vm="clr-namespace:SteamInfomation.MVVM.ViewModels"
              x:DataType="vm:AccountInformationViewModel"
              Title="AccountInformation">
-    <Grid Margin="20" Padding="20" ColumnSpacing="20" RowSpacing="20" HorizontalOptions="Center">
+    <Grid Margin="20" Padding="20" ColumnSpacing="20" RowSpacing="20" HorizontalOptions="CenterAndExpand" VerticalOptions="Start">
 
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -30,7 +30,7 @@
         <Entry Placeholder="Enter SteamID"
                x:Name="steamIdEntry"
                FontSize="16"
-               HorizontalOptions="FillAndExpand"
+               HorizontalOptions="Fill"
                VerticalOptions="Center"
                Grid.Row="0" 
                Grid.Column="0" 
@@ -41,10 +41,13 @@
         <Button Text="Search"
                 FontSize="16"
                 BackgroundColor="Red"
-                HorizontalOptions="FillAndExpand"
+                HorizontalOptions="Fill"
                 VerticalOptions="Center"
                 Command="{Binding FetchAccountDataCommand}"
-                Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" />
+                Grid.Row="1" 
+                Grid.Column="0" 
+                Grid.ColumnSpan="2"
+                 />
 
         <!-- Profile Image -->
         <Image Source="{Binding Avatarfullsize}"
@@ -52,7 +55,7 @@
                HeightRequest="200"
                WidthRequest="200"
                HorizontalOptions="Center"
-               VerticalOptions="CenterAndExpand"
+               VerticalOptions="Center"
                Grid.Row="2" Grid.Column="0" 
                Grid.ColumnSpan="2"
                
@@ -66,7 +69,7 @@
                VerticalOptions="Center"
                Grid.Row="3" Grid.Column="0"/>
 
-        <Label Text="{Binding Gamertag}"
+        <Label Text="{Binding Gamername}"
                FontSize="16"
                HorizontalOptions="Center"
                VerticalOptions="Center"
@@ -94,12 +97,16 @@
                VerticalOptions="Center"
                Grid.Row="7" Grid.Column="0"/>
 
-        <Label Text="{Binding Profilelink}"
-               FontSize="16"
-               HorizontalOptions="CenterAndExpand"
-               VerticalOptions="Center"
-               TextColor="Blue"
-               TextDecorations="Underline"
-               Grid.Row="8" />
+        <Label Text="Link"
+       FontSize="16"
+       HorizontalOptions="Center"
+       VerticalOptions="Center"
+       TextColor="Blue"
+       TextDecorations="Underline"
+       Grid.Row="8">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding OpenLinkCommand}" />
+            </Label.GestureRecognizers>
+        </Label>
     </Grid>
 </ContentPage>
