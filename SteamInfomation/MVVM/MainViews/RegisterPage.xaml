@@ -4,8 +4,9 @@
              x:Class="SteamInfomation.MVVM.MainViews.RegisterPage"
              xmlns:vm="clr-namespace:SteamInfomation.MVVM.ViewModels"
              x:DataType="vm:RegisterViewModel"
-             Title="RegisterPage">
-    
+             Title="RegisterPage"
+             BackgroundColor="#164863">
+
     <VerticalStackLayout Margin="20">
         <Label Text="Create an Account" FontSize="24" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" />
 
@@ -13,6 +14,6 @@
         <Entry Placeholder="Password" Text="{Binding NewPassword}" IsPassword="True" />
         <Entry Placeholder="Confirm Password" Text="{Binding ConfirmPassword}" IsPassword="True" />
 
-        <Button Text="Create Account" Command="{Binding RegisterCommand}" />
+        <Button Text="Create Account" Command="{Binding RegisterCommand}" Clicked="Button_Clicked" />
     </VerticalStackLayout>
 </ContentPage>

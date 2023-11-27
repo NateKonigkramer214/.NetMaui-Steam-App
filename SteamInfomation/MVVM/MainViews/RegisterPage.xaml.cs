@@ -9,4 +9,9 @@ public partial class RegisterPage : ContentPage
 		InitializeComponent();
 		BindingContext = new RegisterViewModel();
 	}
+
+    private void Button_Clicked(object sender, EventArgs e)
+    {
+		Navigation.PushAsync(new LoginPage());
+    }
 }

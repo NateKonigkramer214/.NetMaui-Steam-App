@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using SteamInfomation.MVVM.MainViews;
 
 namespace SteamInfomation.MVVM.ViewModels
 {
@@ -56,6 +57,7 @@ namespace SteamInfomation.MVVM.ViewModels
                 // Optionally, navigate to the login page or perform other actions
                 // For example, you might want to use Navigation.PushAsync() to navigate to the login page.
                 
+
             }
             else
             {

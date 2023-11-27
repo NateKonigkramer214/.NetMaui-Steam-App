@@ -11,7 +11,7 @@ namespace SteamInfomation.MVVM.Services
     internal class SteamApiService
     {
         private readonly HttpClient _httpClient;
-
+        
 
         public SteamApiService()
         {
