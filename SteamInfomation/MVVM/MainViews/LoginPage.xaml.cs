@@ -9,4 +9,16 @@ public partial class LoginPage : ContentPage
 		InitializeComponent();
 		BindingContext = new LoginViewModel();
 	}
+
+    private void CreateACBtn_Clicked(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new RegisterPage());
+    }
+
+    private void LoginBtn_Clicked(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new SteamAppMainPage());
+    }
+
+
 }

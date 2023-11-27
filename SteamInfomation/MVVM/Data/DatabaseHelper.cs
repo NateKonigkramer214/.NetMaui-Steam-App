@@ -1,13 +1,5 @@
 ﻿using SQLite;
-using SteamInfomation.MVVM.Models;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Numerics;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 
 public static class DatabaseHelper
 {
@@ -41,6 +33,7 @@ public static class DatabaseHelper
 
     private static string DatabasePath => Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), DatabaseName);
 }
+
 
 [Table("Users")]
 public class User
