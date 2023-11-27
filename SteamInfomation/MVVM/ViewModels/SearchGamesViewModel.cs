@@ -50,7 +50,7 @@ namespace SteamInfomation.MVVM.ViewModels
                 Playtime_2weeks = steamGame.response.games[0].playtime_2weeks;
                 Playtime_forever = steamGame.response.games[0].playtime_forever;
                 Games = steamGame.response.games;
-                
+               
 
 
             }

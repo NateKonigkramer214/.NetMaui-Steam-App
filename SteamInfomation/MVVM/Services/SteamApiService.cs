@@ -35,7 +35,7 @@ namespace SteamInfomation.MVVM.Services
             if (Connectivity.Current.NetworkAccess != NetworkAccess.Internet)
                 return null;
 
-            var response = await _httpClient2.GetFromJsonAsync<SteamApiResponse>($"?key={Constants.Constants.API_BASE_URL_2}&steamids={steamId}&format=json");
+            var response = await _httpClient2.GetFromJsonAsync<SteamApiResponse>($"?key={Constants.Constants.API_BASE_URL_2}&steamid={steamId}&format=json");
             return response;
         }
     }
