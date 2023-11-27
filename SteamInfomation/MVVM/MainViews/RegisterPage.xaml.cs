@@ -1,12 +1,12 @@
+
 using SteamInfomation.MVVM.ViewModels;
 
 namespace SteamInfomation.MVVM.MainViews;
-
-public partial class LoginPage : ContentPage
+public partial class RegisterPage : ContentPage
 {
-	public LoginPage()
+	public RegisterPage()
 	{
 		InitializeComponent();
-		BindingContext = new LoginViewModel();
+		BindingContext = new RegisterViewModel();
 	}
 }
