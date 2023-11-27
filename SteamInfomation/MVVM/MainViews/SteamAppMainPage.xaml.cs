@@ -7,18 +7,6 @@ public partial class SteamAppMainPage : ContentPage
 		InitializeComponent();
 	}
 
-    private void ImageButton_Clicked(object sender, EventArgs e)
-    {
-        SearchGames searchGamesPage = new SearchGames();
-        Navigation.PushAsync(searchGamesPage);
-    }
-
-    private void ImageButton_Clicked_1(object sender, EventArgs e)
-    {
-        StatsGames statsGames = new StatsGames();  
-        Navigation.PushAsync(statsGames);
-    }
-
     private void ImageButton_Clicked_2(object sender, EventArgs e)
     {
         AccountInformation accountInformation = new AccountInformation();

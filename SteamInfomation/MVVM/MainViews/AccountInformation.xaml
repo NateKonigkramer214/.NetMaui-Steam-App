@@ -69,7 +69,7 @@
                VerticalOptions="Center"
                Grid.Row="3" Grid.Column="0"/>
 
-        <Label Text="{Binding Gamername}"
+        <Label Text="{Binding Personaname}"
                FontSize="16"
                HorizontalOptions="Center"
                VerticalOptions="Center"

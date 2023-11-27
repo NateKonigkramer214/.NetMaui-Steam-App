@@ -26,7 +26,7 @@ namespace SteamInfomation.MVVM.ViewModels
         [ObservableProperty]
         private string steamid;
         [ObservableProperty]
-        private string gamername;
+        private string personaname;
         [ObservableProperty]
         private string realname;
         [ObservableProperty]
@@ -42,7 +42,7 @@ namespace SteamInfomation.MVVM.ViewModels
 
             if (steamPlayer != null && steamPlayer.response != null && steamPlayer.response.players.Length > 0)
             {
-                Gamername = steamPlayer.response.players[0].personaname;
+                Personaname = steamPlayer.response.players[0].personaname;
                 Realname = steamPlayer.response.players[0].realname;
                 Avatarfullsize = steamPlayer.response.players[0].avatarfull;
                 Profilelink = steamPlayer.response.players[0].profileurl;

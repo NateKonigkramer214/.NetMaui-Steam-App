@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SteamInfomation.MVVM.MainViews.SteamAppMainPage"
              Title="Steam App Home"
-             BackgroundColor="#66c0f4">
+             BackgroundColor="#164863">
 
     <StackLayout>
         <!-- Heading -->
@@ -11,11 +11,13 @@
                Padding="20"
                HorizontalOptions="Center" 
                VerticalOptions="Center" 
-               FontSize="Title"
+               FontSize="34"
                FontAttributes="Bold,Italic"
+               TextColor="#DDF2FD"
+               FontFamily="SairaExtraCondensedbold"
+               
                />
 
-        <!-- Grid with ImageButtons -->
 
         <Grid>
             <!-- First Row -->
@@ -31,29 +33,18 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
-            <!-- ImageButton 1 with Text -->
-            <StackLayout Grid.Row="0" Grid.Column="0" Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
-                <ImageButton Source="test.png" HorizontalOptions="Center" VerticalOptions="Center" Clicked="ImageButton_Clicked"/>
-                <Label Text="Search Games" HorizontalOptions="Center" VerticalOptions="Center" />
-            </StackLayout>
-
-            <!-- ImageButton 2 with Text -->
-            <StackLayout Grid.Row="0" Grid.Column="1" Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
-                <ImageButton Source="test2.png" HorizontalOptions="Center" VerticalOptions="Center" Clicked="ImageButton_Clicked_1"/>
-                <Label Text="Stats Game" HorizontalOptions="Center" VerticalOptions="Center" />
-            </StackLayout>
-
             <!-- ImageButton 3 with Text -->
-            <StackLayout Grid.Row="2" Grid.Column="0" Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center" Padding="20">
+            <StackLayout Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center" Padding="20">
                 <ImageButton Source="test3.png" HorizontalOptions="Center" VerticalOptions="Center" Clicked="ImageButton_Clicked_2" />
-                <Label Text="Account Information" HorizontalOptions="Center" VerticalOptions="Center" />
+                <Label Text="Account Information" HorizontalOptions="Center" VerticalOptions="Center" TextColor="#DDF2FD" FontFamily="SairaExtraCondensedRegular" FontSize="20"/>
             </StackLayout>
 
             <!-- ImageButton 4 with Text -->
-            <StackLayout Grid.Row="2" Grid.Column="1" Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
+            <StackLayout Grid.Row="1" Grid.Column="0" Orientation="Vertical" Grid.ColumnSpan="2" HorizontalOptions="Center" VerticalOptions="Center">
                 <ImageButton Source="test4.png" HorizontalOptions="Center" VerticalOptions="Center" Clicked="ImageButton_Clicked_3"/>
-                <Label Text="Achievements" HorizontalOptions="Center" VerticalOptions="Center" />
+                <Label Text="Achievements" HorizontalOptions="Center" VerticalOptions="Center" TextColor="#DDF2FD" FontFamily="SairaExtraCondensedRegular" FontSize="20"/>
             </StackLayout>
+            
         </Grid>
     </StackLayout>
 </ContentPage>
