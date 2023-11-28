@@ -3,28 +3,17 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SteamInfomation.MVVM.MainViews.LoginPage"
              xmlns:vm="clr-namespace:SteamInfomation.MVVM.ViewModels"
-             x:DataType="vm:LoginViewModel"
+             
              Title="Login"
              BackgroundColor="#164863">
 
 
-    <StackLayout Margin="20">
-        <Image Source="steam2p.png" />
-        <!-- Title -->
-        <Label Text="Steam App" HorizontalOptions="Center" Grid.Row="0" FontSize="30"  Padding="20"/>
-        <!-- Login Entry-->
-        <Entry Placeholder="Username" Text="{Binding Username}" TextColor="Black" />
-        <Entry Placeholder="Password" Text="{Binding Password}" IsPassword="True" TextColor="Black" />
-        <Button x:Name="LoginBtn" Text="Login" Command="{Binding LoginCommand}" />
-
-        <Button x:Name="CreateACBtn"
-                Text="New here? Create an account"
-                BackgroundColor="Transparent"
-                BorderColor="Transparent"
-                TextColor="Black"
-                FontAttributes="Italic"
-                FontSize="14"
-                Clicked="CreateACBtn_Clicked" />
+    <StackLayout>
+        <Label Text="Login" HorizontalOptions="CenterAndExpand" FontSize="Large" Margin="0,20,0,20"/>
+        <Entry Placeholder="Username" x:Name="LoginUsernameEntry"/>
+        <Entry Placeholder="Password" IsPassword="True" x:Name="LoginPasswordEntry"/>
+        <Button Text="Login" Clicked="OnLoginClicked"/>
+        <Button Text="want to register?" x:Name="GTRegbtn" Clicked="GTRegbtn_Clicked"/>
     </StackLayout>
 
 </ContentPage>
