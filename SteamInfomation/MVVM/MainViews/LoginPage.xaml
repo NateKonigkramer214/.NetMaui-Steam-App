@@ -5,16 +5,22 @@
              xmlns:vm="clr-namespace:SteamInfomation.MVVM.ViewModels"
              
              Title="Login"
-             BackgroundColor="White">
+             BackgroundColor="#164863">
 
 
     <StackLayout>
-        <Image Source="steam2p.png" />
         <Label Text="Login" HorizontalOptions="CenterAndExpand" FontSize="Large" Margin="0,20,0,20"/>
         <Entry Placeholder="Username" x:Name="LoginUsernameEntry"/>
         <Entry Placeholder="Password" IsPassword="True" x:Name="LoginPasswordEntry"/>
         <Button Text="Login" Clicked="OnLoginClicked"/>
-        <Button Text="want to register?" x:Name="GTRegbtn" Clicked="GTRegbtn_Clicked"/>
+        <!--GTRegbtn means Go To Register Button-->
+        <Button  x:Name="GTRegbtn" Clicked="GTRegbtn_Clicked"
+                Text="New here? Create an account"
+                BackgroundColor="Transparent"
+                BorderColor="Transparent"
+                TextColor="White"
+                FontAttributes="Italic"
+                FontSize="14"/>
     </StackLayout>
 
 </ContentPage>
