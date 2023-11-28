@@ -7,7 +7,7 @@ public partial class RegisterPage : ContentPage
 	public RegisterPage()
 	{
 		InitializeComponent();
-		BindingContext = new RegisterViewModel();
+		
 	}
 
     private void Button_Clicked(object sender, EventArgs e)

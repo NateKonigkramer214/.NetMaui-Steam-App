@@ -46,6 +46,7 @@ namespace SteamInfomation.MVVM.ViewModels
                 Realname = steamPlayer.response.players[0].realname;
                 Avatarfullsize = steamPlayer.response.players[0].avatarfull;
                 Profilelink = steamPlayer.response.players[0].profileurl;
+                
             }
         }
 
