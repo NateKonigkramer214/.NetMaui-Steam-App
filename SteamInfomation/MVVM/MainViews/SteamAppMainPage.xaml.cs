@@ -18,4 +18,9 @@ public partial class SteamAppMainPage : ContentPage
         Achievements achievements = new Achievements();
         Navigation.PushAsync(achievements);
     }
+
+    private void ImageButton_Clicked(object sender, EventArgs e)
+    {
+        Launcher.Default.OpenAsync("https://forms.gle/ge3gq1dReqeMhUp76");
+    }
 }

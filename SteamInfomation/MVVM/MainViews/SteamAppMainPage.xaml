@@ -44,7 +44,13 @@
                 <ImageButton Source="test4.png" HorizontalOptions="Center" VerticalOptions="Center" Clicked="ImageButton_Clicked_3"/>
                 <Label Text="Achievements" HorizontalOptions="Center" VerticalOptions="Center" TextColor="#DDF2FD" FontFamily="SairaExtraCondensedRegular" FontSize="20"/>
             </StackLayout>
-            
+
+            <!-- ImageButton 5 with Text -->
+            <StackLayout Grid.Row="2" Grid.Column="0" Orientation="Vertical" Grid.ColumnSpan="2" HorizontalOptions="Center" VerticalOptions="Center">
+                <ImageButton Source="feedback.png" HorizontalOptions="Center" VerticalOptions="Center" Clicked="ImageButton_Clicked"/>
+                <Label Text="Feedback Form" HorizontalOptions="Center" VerticalOptions="Center" TextColor="#DDF2FD" FontFamily="SairaExtraCondensedRegular" FontSize="20"/>
+            </StackLayout>
+
         </Grid>
     </StackLayout>
 </ContentPage>
