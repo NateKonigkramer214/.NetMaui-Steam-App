@@ -2,8 +2,6 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SteamInfomation.MVVM.MainViews.RegisterPage"
-             xmlns:vm="clr-namespace:SteamInfomation.MVVM.ViewModels"
-             x:DataType="vm:RegisterViewModel"
              Title="RegisterPage"
              BackgroundColor="#164863">
 

@@ -8,9 +8,7 @@
     <Grid Margin="20" Padding="20" ColumnSpacing="20" RowSpacing="20" HorizontalOptions="CenterAndExpand" VerticalOptions="Start">
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
+
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
