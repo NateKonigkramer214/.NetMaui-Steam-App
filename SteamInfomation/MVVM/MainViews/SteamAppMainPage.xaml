@@ -19,7 +19,7 @@
                />
 
 
-        <Grid>
+        <Grid ColumnSpacing="20" RowSpacing="50">
             <!-- First Row -->
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
