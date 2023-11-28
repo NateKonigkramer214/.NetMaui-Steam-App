@@ -12,13 +12,16 @@ namespace SteamInfomation.MVVM.Services
     {
         private readonly HttpClient _httpClient;
         private readonly HttpClient _httpClient2;
+     
 
         public SteamApiService()
         {
             _httpClient = new HttpClient();
             _httpClient2 = new HttpClient();
+            
             _httpClient.BaseAddress = new Uri(Constants.Constants.API_BASE_URL);
             _httpClient2.BaseAddress = new Uri(Constants.Constants.API_BASE_URL_2);
+            
         }
 
         public async Task<SteamApiResponse> GetAccountInformation(string steamId)
@@ -36,6 +39,15 @@ namespace SteamInfomation.MVVM.Services
                 return null;
 
             var response = await _httpClient2.GetFromJsonAsync<SteamApiResponse>($"?key={Constants.Constants.API_BASE_URL_2}&steamids={steamId}&format=json");
+            return response;
+        }
+
+        public async Task<SteamApiResponse2> GettingGameAchivements(string steamId, string appid)
+        {
+            if (Connectivity.Current.NetworkAccess != NetworkAccess.Internet)
+                return null;
+
+            var response = await _httpClient2.GetFromJsonAsync<SteamApiResponse2>($"?appid={appid}&key={Constants.Constants.API_KEY}&steamid={steamId}");
             return response;
         }
     }

@@ -1,39 +1,44 @@
-﻿using Newtonsoft.Json;
+﻿using SteamInfomation.MVVM.Services;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 using SteamInfomation.MVVM.Models;
-using SteamInfomation.MVVM.ViewModels;
-using System.Collections.ObjectModel;
 using System.Windows.Input;
 
-public class AchievementsViewModel : ViewModelBase
+internal partial class AchievementsViewModel : ObservableObject
 {
-    private ObservableCollection<Achievement> _achievements;
-
-    public ObservableCollection<Achievement> Achievements
+    private readonly SteamApiService _teamApiService;
+    public AchievementsViewModel()
     {
-        get => _achievements;
-        set
-        {
-            if (_achievements != value)
-            {
-                _achievements = value;
-                OnPropertyChanged();
-            }
-        }
+        _teamApiService = new SteamApiService();
     }
 
-    public ICommand LoadAchievementsCommand => new Command(async () => await LoadAchievements());
+    [ObservableProperty]
+    private string steamid;
+    [ObservableProperty]
+    private string appid;
+    [ObservableProperty]
+    private string gamename;
+    [ObservableProperty]
+    private string achievements;
+    [ObservableProperty]
+    private string achieved;
+    [ObservableProperty]
+    private string unlocktime;
 
-    private async Task LoadAchievements()
+
+    [RelayCommand]
+    public async Task FetchAchievementsData()
     {
-        
-        string apiUrl = " http://api.steampowered.com/ISteamUserStats/GetPlayerAchievements/v0001/";
+        var steamPlayer = await _teamApiService.GetAccountInformation();
 
-        using (HttpClient client = new HttpClient())
+        if (steamPlayer != null && steamPlayer.response != null && steamPlayer.response.players.Length > 0)
         {
-            var response = await client.GetStringAsync(apiUrl);
-            var achievements = JsonConvert.DeserializeObject<List<Achievement>>(response);
-
-            Achievements = new ObservableCollection<Achievement>(achievements);
+            
         }
     }
 }
