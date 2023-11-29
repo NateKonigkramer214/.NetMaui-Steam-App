@@ -4,11 +4,13 @@
              x:Class="SteamInfomation.MVVM.MainViews.AccountInformation"
              xmlns:vm="clr-namespace:SteamInfomation.MVVM.ViewModels"
              x:DataType="vm:AccountInformationViewModel"
-             Title="AccountInformation">
+             Title="AccountInformation"
+             BackgroundColor="#164863">
     <Grid Margin="20" Padding="20" ColumnSpacing="20" RowSpacing="20" HorizontalOptions="CenterAndExpand" VerticalOptions="Start">
 
         <Grid.RowDefinitions>
 
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>

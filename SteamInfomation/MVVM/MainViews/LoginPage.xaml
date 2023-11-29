@@ -9,7 +9,7 @@
 
 
     <StackLayout>
-        <Label Text="Login" HorizontalOptions="CenterAndExpand" FontSize="Large" Margin="0,20,0,20"/>
+        <Label Text="Welcome for Steam Tracker" HorizontalOptions="CenterAndExpand" FontSize="Large" Margin="0,20,0,20"/>
         <Entry Placeholder="Username" x:Name="LoginUsernameEntry"/>
         <Entry Placeholder="Password" IsPassword="True" x:Name="LoginPasswordEntry"/>
         <Button Text="Login" Clicked="OnLoginClicked"/>
