@@ -103,7 +103,8 @@
        VerticalOptions="Center"
        TextColor="Blue"
        TextDecorations="Underline"
-       Grid.Row="8">
+       Grid.Row="8"
+       Grid.Column="1">
             <Label.GestureRecognizers>
                 <TapGestureRecognizer Command="{Binding OpenLinkCommand}" />
             </Label.GestureRecognizers>
