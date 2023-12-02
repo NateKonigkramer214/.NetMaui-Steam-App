@@ -3,7 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SteamInfomation.MVVM.MainViews.LoginPage"
              xmlns:vm="clr-namespace:SteamInfomation.MVVM.ViewModels"
-             
              Title="Login"
              BackgroundColor="#164863">
 

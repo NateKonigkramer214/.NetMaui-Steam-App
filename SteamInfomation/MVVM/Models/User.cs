@@ -12,8 +12,5 @@ namespace SteamInfomation.MVVM.Models
         public string Password { get; set; }
     }
 
-    public static class UserRepository
-    {
-        public static List<User> Users { get; } = new List<User>();
-    }
+
 }

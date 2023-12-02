@@ -1,33 +1,30 @@
 
 using SteamInfomation.MVVM.Models;
-using SteamInfomation.MVVM.ViewModels;
+using SteamInfomation.MVVM.Services;
 
 namespace SteamInfomation.MVVM.MainViews;
 public partial class RegisterPage : ContentPage
 {
-    List<User> users = new List<User>();
+    //List<User> users = new List<User>();
+    DBH database;
     public RegisterPage()
     {
         InitializeComponent();
+        database = new DBH(Path.Combine(FileSystem.AppDataDirectory, "Data\\App.db"));
 
     }
 
-    private void OnRegisterClicked(object sender, EventArgs e)
+    private async void OnRegisterClicked(object sender, EventArgs e)
     {
-        string username = UsernameEntry.Text;
-        string password = PasswordEntry.Text;
-
-        if (!string.IsNullOrWhiteSpace(username) && !string.IsNullOrWhiteSpace(password))
+        var user = new User
         {
-            var user = new User { Username = username, Password = password };
-            UserRepository.Users.Add(user);
+            Username = UsernameEntry.Text,
+            Password = PasswordEntry.Text
+        };
 
-            DisplayAlert("Success", "Registration successful!", "OK");
-        }
-        else
-        {
-            DisplayAlert("Error", "Please enter a username and password", "OK");
-        }
+        await database.SaveUserAsync(user);
+        await DisplayAlert("Success", "Register successful!", "OK");
+
     }
 
     //  private void Button_Clicked(object sender, EventArgs e)
