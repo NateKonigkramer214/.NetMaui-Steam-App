@@ -28,11 +28,14 @@ public partial class LoginPage : ContentPage
             // Authentication successful, navigate to the next page or perform desired action
             await Navigation.PushAsync(new SteamAppMainPage());
             Console.WriteLine("Login Successful!");
+            await DisplayAlert("Success", "Login successful!", "OK");
+
         }
         else
         {
             // Authentication failed, display an error message or take appropriate action
             Console.WriteLine("Login Failed. Invalid username or password.");
+            await DisplayAlert("Failed", "Login Failed. Invalid username or password.", "OK");
         }
 
     }

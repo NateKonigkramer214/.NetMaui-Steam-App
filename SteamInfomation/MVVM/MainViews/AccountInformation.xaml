@@ -36,11 +36,33 @@
                Grid.Column="0" 
                Grid.ColumnSpan="2" 
                Text="{Binding Steamid}"/>
+        <!--This is the Picker for the saves-->
+        <Picker 
+            x:Name="SPick"
+            Grid.Column="2"
+            Grid.Row="0"
+            Title="Pick save"
+            SelectedIndexChanged="SPick_SelectedIndexChanged"
+            
+            />
+        <!--This is the button for the saves-->
+        <Button
+            x:Name="SaveBTN"
+            Grid.Row="1"
+            Grid.Column="2"
+            HeightRequest="50"
+            WidthRequest="76"
+            Text="Save ID"
+            TextColor="Black"
+            BackgroundColor="LightBlue"
+            Clicked="SaveBTN_Clicked"
+            />
 
         <!-- Button to trigger the search -->
         <Button Text="Search"
                 FontSize="16"
-                BackgroundColor="Red"
+                BackgroundColor="LightBlue"
+                TextColor="Black"
                 HorizontalOptions="Fill"
                 VerticalOptions="Center"
                 Command="{Binding FetchAccountDataCommand}"
