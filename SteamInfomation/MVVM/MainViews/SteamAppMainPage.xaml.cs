@@ -4,11 +4,18 @@ namespace SteamInfomation.MVVM.MainViews;
 
 public partial class SteamAppMainPage : ContentPage
 {
+    private Action<object> navigationAction;
+
     public ILauncher Launcher { get; set; }
 
     public SteamAppMainPage()
 	{
 		InitializeComponent();
+    }
+
+    public SteamAppMainPage(Action<object> navigationAction)
+    {
+        this.navigationAction = navigationAction;
     }
 
     public void ImageButton_Clicked_2(object sender, EventArgs e)
