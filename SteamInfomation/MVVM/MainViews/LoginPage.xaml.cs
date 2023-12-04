@@ -6,6 +6,7 @@ namespace SteamInfomation.MVVM.MainViews;
 
 public partial class LoginPage : ContentPage
 {
+
     DBH database;
     public LoginPage()
     {
@@ -16,7 +17,6 @@ public partial class LoginPage : ContentPage
 
     private async void OnLoginClicked(object sender, EventArgs e)
     {
-
         var users = await database.GetUsersAsync();
         var enteredUsername = LoginUsernameEntry.Text;
         var enteredPassword = LoginPasswordEntry.Text;
@@ -28,7 +28,7 @@ public partial class LoginPage : ContentPage
             // Authentication successful, navigate to the next page or perform desired action
             await Navigation.PushAsync(new SteamAppMainPage());
             Console.WriteLine("Login Successful!");
-            await DisplayAlert("Success", "Login successful!", "OK");
+            await DisplayAlert("Success", "Login successful!", "OK"); 
 
         }
         else
@@ -40,7 +40,7 @@ public partial class LoginPage : ContentPage
 
     }
 
-    private async void GTRegbtn_Clicked(object sender, EventArgs e)
+    public async void GTRegbtn_Clicked(object sender, EventArgs e)
     {
         await Navigation.PushAsync(new RegisterPage());
     }

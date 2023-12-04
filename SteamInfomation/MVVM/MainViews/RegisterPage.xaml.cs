@@ -6,7 +6,9 @@ namespace SteamInfomation.MVVM.MainViews;
 public partial class RegisterPage : ContentPage
 {
     //List<User> users = new List<User>();
+
     DBH database;
+
     public RegisterPage()
     {
         InitializeComponent();
@@ -14,7 +16,7 @@ public partial class RegisterPage : ContentPage
 
     }
 
-    private async void OnRegisterClicked(object sender, EventArgs e)
+    public async void OnRegisterClicked(object sender, EventArgs e)
     {
         var user = new User
         {
@@ -27,8 +29,4 @@ public partial class RegisterPage : ContentPage
 
     }
 
-    //  private void Button_Clicked(object sender, EventArgs e)
-    //  {
-    //Navigation.PushAsync(new LoginPage());
-    //  }
 }
