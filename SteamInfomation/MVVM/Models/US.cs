@@ -9,6 +9,6 @@ namespace SteamInfomation.MVVM.Models
     public class US
     {
         public string SteamID { get; set; }
-        public string ID { get; set; }
+
     }
 }
